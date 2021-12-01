@@ -72,7 +72,7 @@ class NFseCancellation extends ConsultBase
         //identifica o retorno e faz o processamento nescessário
         if (is_object($xmlResponse) && isset($xmlResponse->ListaMensagemRetorno)) {
             $wsError = new ErrorMsg($xmlResponse);
-            $messages = $wsError->getMessages();
+            $messages = $wsError->getMessages('ListaMensagemRetorno');
 
             return (object) $this->errors = ($messages) ? $messages : $wsError->getError();
         } else {

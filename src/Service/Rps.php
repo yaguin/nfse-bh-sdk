@@ -319,6 +319,10 @@ class Rps
             $tagUf = $this->xml->createElement('Uf', $lot->rps->taker->address->state);
             $tagCep = $this->xml->createElement('Cep', $lot->rps->taker->address->zipCode);
 
+            $tagContato = $this->xml->createElement('Contato');
+            $tagTelefone = $this->xml->createElement('Telefone', $lot->rps->taker->phone);
+            $tagEmail = $this->xml->createElement('Email', $lot->rps->taker->email);
+
             //faz o append das tags
             $tagCpfCnpj->appendChild(($lot->rps->taker->type == Self::CNPJ) ? $tagCnpj : $tagCpf);
             $tagIdentifTomador->appendChild($tagCpfCnpj);
@@ -333,6 +337,9 @@ class Rps
             $tagEndereco->appendChild($tagRua);
             $tagEndereco->appendChild($tagNumero);
 
+            $tagContato->appendChild($tagTelefone);
+            $tagContato->appendChild($tagEmail);
+
             if (!empty($lot->rps->taker->address->complement)) {
                 $tagEndereco->appendChild($tagComplemento);
             }
@@ -343,6 +350,7 @@ class Rps
             $tagEndereco->appendChild($tagCep);
 
             $this->tomador->appendChild($tagEndereco);
+            $this->tomador->appendChild($tagContato);
         } catch (Exception $e) {
             throw $e;
         }

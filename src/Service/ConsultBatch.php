@@ -46,13 +46,13 @@ class ConsultBatch extends ConsultBase
         }
 
         //carrega o xml de resposta para um object
-        $xmlResponse = simplexml_load_string($wsResponse->outputXML);
+        $xmlResponse = (object) simplexml_load_string($wsResponse->outputXML);
 
         //identifica o retorno e faz o processamento nescessário
         if (is_object($xmlResponse) && isset($xmlResponse->ListaMensagemRetornoLote)) {
             $wsError = new ErrorMsg($xmlResponse);
             $messages = $wsError->getMessages('ListaMensagemRetornoLote', true);
-
+            return $wsError->getWsResponse();
             return (object) $this->errors = ($messages) ? $messages : $wsError->getError();
         } else {
             $wsLote = new ConsultaLoteRps($wsResponse);

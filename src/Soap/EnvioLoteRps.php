@@ -21,6 +21,16 @@ class EnvioLoteRps
                 'numeroLote'       => $this->wsResponse->NumeroLote->__toString(),
                 'protocolo'        => $this->wsResponse->Protocolo->__toString(),
                 'dataRecebimento'  => $this->wsResponse->DataRecebimento->__toString(),
+                'nfse'             => [
+                    'numero' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->Numero->__toString(),
+                    'numeroRps' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->IdentificacaoRps->Numero->__toString(),
+                    'codigoVerificacao' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->CodigoVerificacao->__toString(),
+                    'dataEmissao' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->DataEmissao->__toString(),
+                    'competencia' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->Competencia->__toString(),
+                    'prestadorCnpj' => $this->wsResponse->ListaNfse->CompNfse->Nfse->InfNfse->PrestadorServico->IdentificacaoPrestador->Cnpj->__toString(),
+                    'xml' => "<?xml version='1.0' encoding='UTF-8'?>" . $this->wsResponse->ListaNfse->CompNfse->saveXML()
+                ],
+                'xml' => $this->wsResponse->saveXML()
             ];
         } else {
             $this->error = "Não foi possivel processar a resposta do servidor da prefeitura.";

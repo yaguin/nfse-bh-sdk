@@ -24,7 +24,7 @@ class LoteRps
      */
     public function __construct(Settings $settings, string $numLote)
     {
-        $this->xSoap = new Soap($settings, 'RecepcionarLoteRpsRequest');
+        $this->xSoap = new Soap($settings, 'GerarNfseRequest');
         $this->loteRps = new XmlRps($settings, $numLote);
 
         $this->subscriber = new Subscriber($settings);
@@ -74,11 +74,11 @@ class LoteRps
         $xmlResponse = simplexml_load_string($wsResponse->outputXML);
 
         //identifica o retorno e faz o processamento nescessário
-        if (is_object($xmlResponse) && isset($xmlResponse->ListaMensagemRetorno)) {
+        if (is_object($xmlResponse) && isset($xmlResponse->ListaMensagemRetornoLote) || isset($xmlResponse->ListaMensagemRetorno)) {
             $wsError = new ErrorMsg($xmlResponse);
             return (object) [
                 'success' => false,
-                'messages' => (object) $wsError->getMessages(),
+                'response' => (object) $wsError->getWsResponse(),
             ];
         } else {
             $wsLote = new EnvioLoteRps($wsResponse);
