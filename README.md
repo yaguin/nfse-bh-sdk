@@ -13,7 +13,7 @@ Mínimo ```PHP 7.2```
 
 Efetue download utilizando composer
 
-```composer require wsilva94/nfse-bh-sdk```
+```composer require yaguin/nfse-bh-sdk```
 
 ## Começando
 
@@ -75,12 +75,11 @@ Siga os casos de testes dentro da pasta "tests"
 
 ## Autor
 
-* **Wander Alves** - [Linkedin](https://www.linkedin.com/in/wander-alves-935b6314b)
+* **Yago Fernandes** - [Linkedin](https://www.linkedin.com/in/yago-fernandes)
 
 ## Contribuintes
 
-* **Alef Carvalho**  - [GitLab](https://gitlab.com/alefcarvalho)
-* **José Francisco**  - [GitHub](https://github.com/josefcts)
+* **Wander Alves**  - [Linkedin](https://www.linkedin.com/in/wander-alves-935b6314b)
 
 ## Licença
 
@@ -88,7 +87,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.m
 
 ## Agradecimentos
 
-* [Link Certificação Digital](https://www.linkcertificacao.com.br/) pelo apoio ao me conceder tempo e recursos para a implementação desta biblioteca.
+* [Krypton Tech](https://kryptontech.com.br/) pelo apoio ao me conceder tempo e recursos para a implementação desta biblioteca.
 
 
 
