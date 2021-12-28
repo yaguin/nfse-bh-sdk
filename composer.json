@@ -1,13 +1,13 @@
 {
     "name": "yaguin/nfse-bh-sdk",
     "type": "library",
-    "description": "Biblioteca para geração de NFSE de Belo Horizonte",
-    "homepage": "https://www.linkedin.com/in/wander-alves-935b6314b",
+    "description": "Biblioteca para geração de NFS-E de Belo Horizonte",
+    "homepage": "https://www.linkedin.com/in/yago-fernandes",
     "keywords": ["nfse", "lib", "nfsebh"],
     "license": "MIT",
     "authors": [{
-        "name": "Wander Alves",
-        "email": "wsilva_94@outlook.com"
+        "name": "Yago Fernandes",
+        "email": "yagof.3111@gmail.com"
     }],
     "minimum-stability": "stable",
     "prefer-stable": true,
