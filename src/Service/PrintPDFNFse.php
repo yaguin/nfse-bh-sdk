@@ -393,7 +393,7 @@ class PrintPDFNFse
                 strtolower($this->nfse->service->itemDescription),
 
                 $this->nfse->service->municipalCode,
-                strtolower($this->nfse->service->municipalName),
+                $this->nfse->service->municipalName,
 
                 $operations[$this->nfse->service->nature],
                 $specialTaxRegime,
