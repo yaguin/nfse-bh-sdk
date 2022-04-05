@@ -178,6 +178,7 @@ class Rps
             $tagValIR = $this->xml->createElement('ValorIr', $lot->rps->service->valueIR);
             $tagValCSLL = $this->xml->createElement('ValorCsll', $lot->rps->service->valueCSLL);
             $tagISSRetido = $this->xml->createElement('IssRetido', $lot->rps->service->issWithheld);
+            $tagValIss = $this->xml->createElement('ValorIss', $lot->rps->service->issValue);
             $tagOutrasRet = $this->xml->createElement('OutrasRetencoes', $lot->rps->service->otherDeductions);
             $tagAliquota = $this->xml->createElement('Aliquota', $lot->rps->service->aliquot);
             $tagDescontoInc = $this->xml->createElement('DescontoIncondicionado', $lot->rps->service->unconditionedDiscount);
@@ -192,6 +193,7 @@ class Rps
             $tagValores->appendChild($tagValIR);
             $tagValores->appendChild($tagValCSLL);
             $tagValores->appendChild($tagISSRetido);
+            $tagValores->appendChild($tagValIss);
             $tagValores->appendChild($tagOutrasRet);
             $tagValores->appendChild($tagAliquota);
             $tagValores->appendChild($tagDescontoInc);
