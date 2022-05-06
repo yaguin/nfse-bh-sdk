@@ -8,9 +8,4 @@
         <DataInicial>{{DataInicial}}</DataInicial>
         <DataFinal>{{DataFinal}}</DataFinal>
     </PeriodoEmissao>
-    <Tomador>
-        <CpfCnpj>
-            {{docTomador}}
-        </CpfCnpj>
-    </Tomador>
 </ConsultarNfseEnvio>

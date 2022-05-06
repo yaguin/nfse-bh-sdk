@@ -156,6 +156,9 @@ class ConsultaLoteRps
             'incentivadorCultural' => isset($InfNfse->IncentivadorCultural) ? $InfNfse->IncentivadorCultural->__toString() : null,
             'competencia' => isset($InfNfse->Competencia) ? $InfNfse->Competencia->__toString() : null,
             'outrasInformacoes' => isset($InfNfse->OutrasInformacoes) ? $InfNfse->OutrasInformacoes->__toString() : null,
+            'nfseSubstituida' => isset($InfNfse->NfseSubstituida) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
+            'nfseSubstituidora' => isset($InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
+            'identificacaoRps' => isset($InfNfse->IdentificacaoRps->Numero) ? $InfNfse->IdentificacaoRps->Numero->__toString() : null,
 
             'servico' => [
                 'valores' => [
@@ -216,6 +219,14 @@ class ConsultaLoteRps
                 'codigoMunicipio' => isset($InfNfse->OrgaoGerador->CodigoMunicipio) ? $InfNfse->OrgaoGerador->CodigoMunicipio->__toString() : null,
                 'uf' => isset($InfNfse->OrgaoGerador->Uf) ? $InfNfse->OrgaoGerador->Uf->__toString() : null,
             ] : null,
+        ];
+    }
+
+    public function getInfSearchNFSeCancellation($InfNfse)
+    {
+        return [
+            'codCancelamento ' => isset($InfNfse->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento) ? $InfNfse->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento->__toString() : null,
+            'dataCancelamento' => isset($InfNfse->Confirmacao->DataHora) ? str_replace("T"," ",$InfNfse->Confirmacao->DataHora) : null
         ];
     }
 

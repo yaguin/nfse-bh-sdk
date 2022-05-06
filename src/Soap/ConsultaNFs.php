@@ -7,9 +7,9 @@ class ConsultaNFs extends ConsultaLoteRps
     private $NFs;
 
     //construtor (passar o SOAP response)
-    public function __construct($wsResponse)
+    public function construct($wsResponse)
     {
-        return parent::__construct($wsResponse);
+        return parent::construct($wsResponse);
     }
 
     //retorna os dados de entrada do lote após o envio
@@ -26,8 +26,9 @@ class ConsultaNFs extends ConsultaLoteRps
                 foreach ($nfsList as $NFS) {
                     //adiciona a nota ao array
                     $this->domDocument->loadXML($NFS->asXML());
-                    $this->dataLote['nfs'][$NFS->Nfse->InfNfse->Numero->__toString()] = $this->getInfSearchNFSe($NFS->Nfse->InfNfse);
-                    $this->dataLote['xml'][$NFS->Nfse->InfNfse->Numero->__toString()] = $this->domDocument->saveXML();
+                    $this->dataLote['nfs'][$NFS->Nfse->InfNfse->Numero->toString()] = $this->getInfSearchNFSe($NFS->Nfse->InfNfse);
+                    $this->dataLote['xml'][$NFS->Nfse->InfNfse->Numero->toString()] = $this->domDocument->saveXML();
+                    $this->dataLote['nfseCancelamento'][$NFS->Nfse->InfNfse->Numero->__toString()] =  $this->getInfSearchNFSeCancellation($NFS->NfseCancelamento);
                 }
             } else {
                 $this->dataLote['nfs'] = null;
