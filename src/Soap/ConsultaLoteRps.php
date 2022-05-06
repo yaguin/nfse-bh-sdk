@@ -156,7 +156,7 @@ class ConsultaLoteRps
             'incentivadorCultural' => isset($InfNfse->IncentivadorCultural) ? $InfNfse->IncentivadorCultural->__toString() : null,
             'competencia' => isset($InfNfse->Competencia) ? $InfNfse->Competencia->__toString() : null,
             'outrasInformacoes' => isset($InfNfse->OutrasInformacoes) ? $InfNfse->OutrasInformacoes->__toString() : null,
-            'nfseSubstituida' => isset($InfNfse->NfseSubstituida) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
+            'nfseSubstituida' => isset($InfNfse->NfseSubstituida) ? $InfNfse->NfseSubstituida : null,
             'nfseSubstituidora' => isset($InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
             'identificacaoRps' => isset($InfNfse->IdentificacaoRps->Numero) ? $InfNfse->IdentificacaoRps->Numero->__toString() : null,
 

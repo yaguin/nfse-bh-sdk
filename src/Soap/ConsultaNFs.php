@@ -26,8 +26,8 @@ class ConsultaNFs extends ConsultaLoteRps
                 foreach ($nfsList as $NFS) {
                     //adiciona a nota ao array
                     $this->domDocument->loadXML($NFS->asXML());
-                    $this->dataLote['nfs'][$NFS->Nfse->InfNfse->Numero->toString()] = $this->getInfSearchNFSe($NFS->Nfse->InfNfse);
-                    $this->dataLote['xml'][$NFS->Nfse->InfNfse->Numero->toString()] = $this->domDocument->saveXML();
+                    $this->dataLote['nfs'][$NFS->Nfse->InfNfse->Numero->__toString()] = $this->getInfSearchNFSe($NFS->Nfse->InfNfse);
+                    $this->dataLote['xml'][$NFS->Nfse->InfNfse->Numero->__toString()] = $this->domDocument->saveXML();
                     $this->dataLote['nfseCancelamento'][$NFS->Nfse->InfNfse->Numero->__toString()] =  $this->getInfSearchNFSeCancellation($NFS->NfseCancelamento);
                 }
             } else {
