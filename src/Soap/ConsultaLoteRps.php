@@ -157,7 +157,6 @@ class ConsultaLoteRps
             'competencia' => isset($InfNfse->Competencia) ? $InfNfse->Competencia->__toString() : null,
             'outrasInformacoes' => isset($InfNfse->OutrasInformacoes) ? $InfNfse->OutrasInformacoes->__toString() : null,
             'nfseSubstituida' => isset($InfNfse->NfseSubstituida) ? $InfNfse->NfseSubstituida : null,
-            'nfseSubstituidora' => isset($InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
             'identificacaoRps' => isset($InfNfse->IdentificacaoRps->Numero) ? $InfNfse->IdentificacaoRps->Numero->__toString() : null,
 
             'servico' => [
@@ -222,11 +221,12 @@ class ConsultaLoteRps
         ];
     }
 
-    public function getInfSearchNFSeCancellation($InfNfse)
+    public function getInfSearchNFSeOthers($InfNfse)
     {
         return [
-            'codCancelamento ' => isset($InfNfse->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento) ? $InfNfse->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento->__toString() : null,
-            'dataCancelamento' => isset($InfNfse->Confirmacao->DataHora) ? str_replace("T"," ",$InfNfse->Confirmacao->DataHora) : null
+            'nfseSubstituidora' => isset($InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
+            'codCancelamento ' => isset($InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento) ? $InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento->__toString() : null,
+            'dataCancelamento' => isset($InfNfse->NfseCancelamento->Confirmacao->DataHora) ? str_replace("T"," ",$InfNfse->NfseCancelamento->Confirmacao->DataHora) : null
         ];
     }
 
