@@ -225,7 +225,7 @@ class ConsultaLoteRps
     {
         return [
             'nfseSubstituidora' => isset($InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora) ? $InfNfse->NfseSubstituicao->SubstituicaoNfse->NfseSubstituidora->__toString() : null,
-            'codCancelamento ' => isset($InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento) ? $InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento->__toString() : null,
+            'codCancelamento' => isset($InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento) ? $InfNfse->NfseCancelamento->Confirmacao->Pedido->InfPedidoCancelamento->CodigoCancelamento->__toString() : null,
             'dataCancelamento' => isset($InfNfse->NfseCancelamento->Confirmacao->DataHora) ? str_replace("T"," ",$InfNfse->NfseCancelamento->Confirmacao->DataHora) : null
         ];
     }
