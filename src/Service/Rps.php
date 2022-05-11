@@ -329,7 +329,7 @@ class Rps
             $tagCpfCnpj->appendChild(($lot->rps->taker->type == Self::CNPJ) ? $tagCnpj : $tagCpf);
             $tagIdentifTomador->appendChild($tagCpfCnpj);
 
-            if (!empty($lot->rps->taker->municipalRegistration) && preg_match('/^[0-9]+$/', $lot->rps->taker->municipalRegistration)) {
+            if (!empty($lot->rps->taker->municipalRegistration)) {
                 //não vazia e somente números
                 $tagIdentifTomador->appendChild($tagInscMunicipal);
             }
