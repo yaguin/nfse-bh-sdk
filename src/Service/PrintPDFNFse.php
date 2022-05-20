@@ -209,6 +209,29 @@ class PrintPDFNFse
             }';
         }
 
+        if ($this->nfse->cancellationCode) {
+            $printCss .= '
+                #container:before{
+                  content: \'NFS-e Cancelada\';
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  z-index: 1;
+                  color: black;
+                  font-size: 100px;
+                  font-weight: 500px;
+                  display: grid;
+                  justify-content: center;
+                  align-content: center;
+                  opacity: 0.2;
+                  transform: rotate(-45deg);
+                  white-space: nowrap;
+                }
+            ';
+        }
+
         $nfseNumberReplaced = '';
 
         if (!empty($this->nfse->nfseNumberReplaced)) {
