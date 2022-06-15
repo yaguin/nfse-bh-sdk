@@ -367,7 +367,7 @@ class Rps
     {
         //sanitiza as entradas
         $razaoSocial = $this->text->with($lot->rps->taker->name)->sanitize()->toUpper()->get();
-        $docTomador = $this->num->with($lot->rps->taker->address->address)->sanitize()->get();
+        $docTomador = $this->num->with($lot->rps->taker->document)->sanitize()->get();
         $endereco['endereco'] = $this->text->with($lot->rps->taker->address->address)->sanitize()->maxL(125)->toUpper()->get();
         $endereco['numero'] = $this->text->with($lot->rps->taker->address->number)->sanitize()->maxL(10)->toUpper()->get();
         $endereco['complemento'] = $this->text->with($lot->rps->taker->address->complement)->sanitize()->maxL(60)->toUpper()->get();
