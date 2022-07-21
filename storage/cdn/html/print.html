@@ -247,423 +247,423 @@
             max-width: 200px;
             padding: 5px;
         }
-       /* {PRINT_CSS}*/
+        /* {PRINT_CSS}*/
     </style>
 </head>
 
 <body>
-    <br>
-    <table id="container" border="0" cellpadding="0" cellspacing="0">
-        <tbody>
-            <tr>
-                <td align="center" style="text-align: center;"><br>
-                    <P class="title">NFS-e - NOTA FISCAL DE SERVIÇO ELETRÔNICA</P>
-                    <hr class="linhaDivisao" />
-                </td>
-            </tr>
-            <tr>
-                <td class="bordaInferior">
-                    <table width="100%" border="0" cellspacing="2" cellpadding="0">
-                        <tr class="teste">
-                            <td width="25%" class="bordaLateral">
-                                <span class="numeroDestaque">N.º: {ANO} / {NFSE_NUMERO} </span>
-                            </td>
-                            <td width="31%" class="bordaLateral">
-                                <span class="subTitulo">Emitida em:<br></span>
-                                <span class="dataEmissao">{DATA_EMISSAO}</span>{HORA_EMISSAO}
-                            </td>
-                            <td width="17%" class="bordaLateral">
-                                <span class="subTitulo">Competência:</span><br>
-                                <span class="dataEmissao">
+<br>
+<table id="container" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+        <td align="center" style="text-align: center;"><br>
+            <P class="title">NFS-e - NOTA FISCAL DE SERVIÇO ELETRÔNICA</P>
+            <hr class="linhaDivisao" />
+        </td>
+    </tr>
+    <tr>
+        <td class="bordaInferior">
+            <table width="100%" border="0" cellspacing="2" cellpadding="0">
+                <tr class="teste">
+                    <td width="25%" class="bordaLateral">
+                        <span class="numeroDestaque">N.º: {ANO} / {NFSE_NUMERO} </span>
+                    </td>
+                    <td width="31%" class="bordaLateral">
+                        <span class="subTitulo">Emitida em:<br></span>
+                        <span class="dataEmissao">{DATA_EMISSAO}</span>{HORA_EMISSAO}
+                    </td>
+                    <td width="17%" class="bordaLateral">
+                        <span class="subTitulo">Competência:</span><br>
+                        <span class="dataEmissao">
                                     {COMPETENCIA}
                                 </span>
-                            </td>
-                            <td width="27%">
-                                <span class="subTitulo">Código de Verificação:<br></span>
-                                <span class="dataEmissao">{CODIGO_VERIFICACAO}</span>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tbody>
+                    </td>
+                    <td width="27%">
+                        <span class="subTitulo">Código de Verificação:<br></span>
+                        <span class="dataEmissao">{CODIGO_VERIFICACAO}</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
                             <tr>
-                                <td valign="top">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <td width="160px">
+                                    <img class="logo"
+                                         src="data:image/png;base64,{LOGO_BASE_64}"
+                                         alt="">&nbsp;
+                                </td>
+                                <td width="491">
+                                    <div class="hh3"> {RAZAO_SOCIAL_PRESTADOR} </div>
+                                    <table width="100%" cellspacing="1" class="teste">
                                         <tbody>
-                                            <tr>
-                                                <td width="160px">
-                                                    <img class="logo"
-                                                        src="data:image/png;base64,{LOGO_BASE_64}"
-                                                        alt="">&nbsp;
-                                                </td>
-                                                <td width="491">
-                                                    <div class="hh3"> {RAZAO_SOCIAL_PRESTADOR} </div>
-                                                    <table width="100%" cellspacing="1" class="teste">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
+                                        <tr>
+                                            <td>
                                                                     <span class="cnpjPrincipal" id="j_id">
                                                                         CPF/CNPJ: {CPF_CNPJ_PRESTADOR}
                                                                     </span>
-                                                                </td>
-                                                                <td>
+                                            </td>
+                                            <td>
                                                                     <span class="cnpjPrincipal" id="j_id2">
                                                                         Inscrição Municipal:
                                                                         {INSCRICAO_MUNICIPAL_PRESTADOR}
                                                                     </span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="2">
-                                                                    {LOGRADOURO_PRESTADOR} ,
-                                                                    {NUMERO_ENDERECO_PRESTADOR} ,
-                                                                    {BAIRRO_PRESTADOR} ,
-                                                                    Cep: {CEP_PRESTADOR}
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                {LOGRADOURO_PRESTADOR} ,
+                                                {NUMERO_ENDERECO_PRESTADOR} ,
+                                                {BAIRRO_PRESTADOR} ,
+                                                Cep: {CEP_PRESTADOR}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
                                                                     <span id="j_id3">
                                                                         {MUNICIPIO_PRESTADOR}
                                                                     </span>
-                                                                </td>
-                                                                <td>
+                                            </td>
+                                            <td>
                                                                     <span id="j_id5">
                                                                         {ESTADO_PRESTADOR}
                                                                     </span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Telefone: {TELEFONE_PRESTADOR}
-                                                                </td>
-                                                                <td>
-                                                                    Email: {EMAIL_PRESTADOR}
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            {NFE_SUBSTITUIDA}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Telefone: {TELEFONE_PRESTADOR}
+                                            </td>
+                                            <td>
+                                                Email: {EMAIL_PRESTADOR}
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            {NFE_SUBSTITUIDA}
+                            <tr>
+                                <td colspan="2">
+                                    <hr class="linhaDivisao" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="box02">
+                                        <table>
+                                            <tbody>
                                             <tr>
                                                 <td colspan="2">
-                                                    <hr class="linhaDivisao" />
+                                                    <div class="hh2">
+                                                        Tomador do(s) Serviço(s)
+                                                    </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <div class="box02">
-                                                        <table>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td colspan="2">
-                                                                        <div class="hh2">
-                                                                            Tomador do(s) Serviço(s)
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="teste">
-                                                                    <td width="52%">
+                                            <tr class="teste">
+                                                <td width="52%">
                                                                         <span class="cnpjPrincipal" id="j_id27">
                                                                             <span id="form:j_id58">
                                                                                 CPF/CNPJ: {CPF_CNPJ_TOMADOR}
                                                                             </span>
                                                                         </span>
-                                                                    </td>
-                                                                    <td width="48%">
+                                                </td>
+                                                <td width="48%">
                                                                         <span class="cnpjPrincipal" id="j_id33">
                                                                             <span id="form:j_id64">
                                                                                 Inscrição Municipal:
                                                                                 {INSCRICAO_MUNICIPAL_TOMADOR}
                                                                             </span>
                                                                         </span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="teste">
-                                                                    <td colspan="2">
+                                                </td>
+                                            </tr>
+                                            <tr class="teste">
+                                                <td colspan="2">
                                                                         <span class="cnpjPrincipal">
                                                                             {RAZAO_SOCIAL_TOMADOR}
                                                                         </span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="teste">
-                                                                    <td colspan="2">
-                                                                        {LOGRADOURO_TOMADOR} ,
-                                                                        {NUMERO_ENDERECO_TOMADOR} ,
-                                                                        {BAIRRO_TOMADOR} ,
-                                                                        Cep: {CEP_TOMADOR}
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="teste">
-                                                                    <td>
+                                                </td>
+                                            </tr>
+                                            <tr class="teste">
+                                                <td colspan="2">
+                                                    {LOGRADOURO_TOMADOR} ,
+                                                    {NUMERO_ENDERECO_TOMADOR} ,
+                                                    {BAIRRO_TOMADOR} ,
+                                                    Cep: {CEP_TOMADOR}
+                                                </td>
+                                            </tr>
+                                            <tr class="teste">
+                                                <td>
                                                                         <span id="j_id41">
                                                                             <span id="form:j_id72">
                                                                                 {MUNICIPIO_TOMADOR}
                                                                             </span>
                                                                         </span>
-                                                                    </td>
-                                                                    <td>
+                                                </td>
+                                                <td>
                                                                         <span id="j_id44">
                                                                             <span id="form:j_id75">
                                                                                 {ESTADO_TOMADOR}
                                                                             </span>
                                                                         </span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="teste">
-                                                                    <td>
-                                                                        Telefone: {TELEFONE_TOMADOR}
-                                                                    </td>
-                                                                    <td>
-                                                                        Email: {EMAIL_TOMADOR}
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <img src="data:image/gif;base64,R0lGODlhhgIKAMQAAOj18v7//9Ts5v3+/ur18tbs5tXs5un18vX7+dru6cnm38zo4cHj2u/49uDx7c3o4fL599zv6vj8++Py7vT6+cjm3uTz78fm3r/i2f///wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAACGAgoAAAXHYJYpiGieaKqubOu+cCzPdG3feK7vfO//wKBwSCwaWwiFqQA4Op/QqHRKrVqv2Ky2CiiYutuweEwum8/otLrINA0qjbV8Tq/b7/i8uHEZnA4GfnqDhIWGh4iJVwMGBykRCRKKk5SVlpeYdhIJESoBDgwTmaOkpaanqDIWDA4BLAgPAgcQqbW2t7i5aBAEAg8UJwSeBAYLGMfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+MLAgSuJwK68PHy8/RUIQA7"
-                                                            alt="." class="noprint" />
-                                                    </div>
-                                                    <hr class="linhaDivisao" />
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>
+                                            <tr class="teste">
+                                                <td>
+                                                    Telefone: {TELEFONE_TOMADOR}
+                                                </td>
+                                                <td>
+                                                    Email: {EMAIL_TOMADOR}
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <img src="data:image/gif;base64,R0lGODlhhgIKAMQAAOj18v7//9Ts5v3+/ur18tbs5tXs5un18vX7+dru6cnm38zo4cHj2u/49uDx7c3o4fL599zv6vj8++Py7vT6+cjm3uTz78fm3r/i2f///wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAACGAgoAAAXHYJYpiGieaKqubOu+cCzPdG3feK7vfO//wKBwSCwaWwiFqQA4Op/QqHRKrVqv2Ky2CiiYutuweEwum8/otLrINA0qjbV8Tq/b7/i8uHEZnA4GfnqDhIWGh4iJVwMGBykRCRKKk5SVlpeYdhIJESoBDgwTmaOkpaanqDIWDA4BLAgPAgcQqbW2t7i5aBAEAg8UJwSeBAYLGMfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+MLAgSuJwK68PHy8/RUIQA7"
+                                             alt="." class="noprint" />
+                                    </div>
+                                    <hr class="linhaDivisao" />
                                 </td>
                             </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr class="teste">
-            </tr>
-            <tr>
-                <td>
-                    <div class="box02">
-                        <table border="0" cellpadding="4" cellspacing="0" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td width="100%">
-                                        <div class="hh2">
-                                            Discriminação do(s) Serviço(s)
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="servicos">
-                                        {DESCRIMINACAO}
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
-                        <img src="data:image/gif;base64,R0lGODlhhgIKAMQAAOj18v7//9Ts5v3+/ur18tbs5tXs5un18vX7+dru6cnm38zo4cHj2u/49uDx7c3o4fL599zv6vj8++Py7vT6+cjm3uTz78fm3r/i2f///wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAACGAgoAAAXHYJYpiGieaKqubOu+cCzPdG3feK7vfO//wKBwSCwaWwiFqQA4Op/QqHRKrVqv2Ky2CiiYutuweEwum8/otLrINA0qjbV8Tq/b7/i8uHEZnA4GfnqDhIWGh4iJVwMGBykRCRKKk5SVlpeYdhIJESoBDgwTmaOkpaanqDIWDA4BLAgPAgcQqbW2t7i5aBAEAg8UJwSeBAYLGMfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+MLAgSuJwK68PHy8/RUIQA7"
-                            alt="." class="noprint" />
-                        <hr class="linhaDivisao" />
-                    </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr class="teste">
+    </tr>
+    <tr>
+        <td>
+            <div class="box02">
+                <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td width="100%">
+                            <div class="hh2">
+                                Discriminação do(s) Serviço(s)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="servicos">
+                            {DESCRIMINACAO}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <img src="data:image/gif;base64,R0lGODlhhgIKAMQAAOj18v7//9Ts5v3+/ur18tbs5tXs5un18vX7+dru6cnm38zo4cHj2u/49uDx7c3o4fL599zv6vj8++Py7vT6+cjm3uTz78fm3r/i2f///wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAACGAgoAAAXHYJYpiGieaKqubOu+cCzPdG3feK7vfO//wKBwSCwaWwiFqQA4Op/QqHRKrVqv2Ky2CiiYutuweEwum8/otLrINA0qjbV8Tq/b7/i8uHEZnA4GfnqDhIWGh4iJVwMGBykRCRKKk5SVlpeYdhIJESoBDgwTmaOkpaanqDIWDA4BLAgPAgcQqbW2t7i5aBAEAg8UJwSeBAYLGMfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+MLAgSuJwK68PHy8/RUIQA7"
+                     alt="." class="noprint" />
+                <hr class="linhaDivisao" />
+            </div>
 
-                    <div class="box04">
-                        <table border="0" cellpadding="2" cellspacing="0" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td>
+            <div class="box04">
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td>
                                         <span class="subTitulo">
                                             Código de Tributação do Município (CTISS)
                                         </span>
-                                        <p class="teste">
-                                            {CODIGO_TRIBUTACAO_MUNICIPAL} -
-                                            {DESCRICAO_TRIBUTACAO_MUNICIPAL}
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <hr class="linhaDivisao" />
-                    </div>
+                            <p class="teste">
+                                {CODIGO_TRIBUTACAO_MUNICIPAL} -
+                                {DESCRICAO_TRIBUTACAO_MUNICIPAL}
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr class="linhaDivisao" />
+            </div>
 
-                    <div style="margin: 0px 5px;">
-                        <p class="teste">
+            <div style="margin: 0px 5px;">
+                <p class="teste">
                             <span class="subTitulo">
                                 Subitem Lista de Serviços LC 116/03 / Descrição:
                             </span>
-                        </p>
-                        <p class="teste"> {ITEM_LISTA_SERVICO} / {DESCRICAO_LISTA_SERVICO}</p>
-                        <hr class="linhaDivisao" />
-                    </div>
+                </p>
+                <p class="teste"> {ITEM_LISTA_SERVICO} / {DESCRICAO_LISTA_SERVICO}</p>
+                <hr class="linhaDivisao" />
+            </div>
 
-                    <div class="box04">
-                        <span id="j_id106"> </span>
-                        <table border="0" cellpadding="2" cellspacing="0" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td valign="top" width="50%">
-                                        <p class="teste">
+            <div class="box04">
+                <span id="j_id106"> </span>
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top" width="50%">
+                            <p class="teste">
                                             <span class="subTitulo">
                                                 Cod/Município da incidência do ISSQN:
                                             </span>
-                                        </p>
-                                        <p class="teste">
-                                            {CODIGO_MUNICIPIO_GERADOR} - {NOME_MUNICIPIO_GERADOR}
-                                        </p>
-                                    </td>
-                                    <td valign="top" width="50%">
+                            </p>
+                            <p class="teste">
+                                {CODIGO_MUNICIPIO_GERADOR} - {NOME_MUNICIPIO_GERADOR}
+                            </p>
+                        </td>
+                        <td valign="top" width="50%">
                                         <span class="subTitulo">
                                             Natureza da Operação:
                                         </span>
-                                        <p class="teste">
-                                            {NATUREZA_OPERACAO}
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <span id="form:j_id124">
+                            <p class="teste">
+                                {NATUREZA_OPERACAO}
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span id="form:j_id124">
                         {REGIME_ESPECIAL_TRIBUTACAO}
                     </span>
-                    <hr class="linhaDivisao" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td valign="top" class="bordaInferior">
-                                <div class="box05"><br>
-                                    <table border="0" cellpadding="4" cellspacing="0" width="100%">
-                                        <tbody>
+            <hr class="linhaDivisao" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td valign="top" class="bordaInferior">
+                        <div class="box05"><br>
+                            <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td class="hh2" width="44%">
+                                        Valor dos serviço(s):
+                                    </td>
+                                    <td class="hh2" width="56%" align="right">
+                                        {VALOR_SERVICOS}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                               class="tableValores">
                                             <tr>
-                                                <td class="hh2" width="44%">
-                                                    Valor dos serviço(s):
+                                                <td width="131" class="bordaInferior">
+                                                    (-) Descontos:
                                                 </td>
-                                                <td class="hh2" width="56%" align="right">
-                                                    {VALOR_SERVICOS}
+                                                <td width="165" align="right" class="bordaInferior">
+                                                    {VALOR_DESCONTO_CONDICIONADO}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">
-                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0"
-                                                        class="tableValores">
-                                                        <tr>
-                                                            <td width="131" class="bordaInferior">
-                                                                (-) Descontos:
-                                                            </td>
-                                                            <td width="165" align="right" class="bordaInferior">
-                                                                {VALOR_DESCONTO_CONDICIONADO}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (-) Retenções Federais:
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {TOTAL_RETENCOES_FEDERAIS}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (-) ISS Retido na Fonte:
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {VALOR_ISS_RETIDO}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="valorLiquido">
-                                                                <b>Valor Líquido:</b>
-                                                            </td>
-                                                            <td align="right" class="valorLiquido">
-                                                                <b>{VALOR_LIQUIDO}</b>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                <td class="bordaInferior">
+                                                    (-) Retenções Federais:
                                                 </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <img src="data:image/gif;base64,R0lGODlhOgELAMQAAOTz9P7//8/p6v3+/ubz9M3p6s7p6uXz9PP6+sXk5uz397fe4NTr7MDi5MTk5tvu8PD4+Nbs7ff7/PL5+t/x8b7i497w8b/i47Xd3////wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAA6AQsAAAWcYJY1iGieaKqubOu+cCzPdG3feK7vKtKcAgBvSCwaj8ikcukCCE5OpnRKrVqv1uBpcFFgv+CweDxVVAaogwFNbrvf8PfAcFBFGJK4fs/v8yQMESsBDwsWfoiJiokUCw8BLQgJBQcQi5eYmVQQBAUJEzABBAYOGKanqKmqq6ytrq+wsbKztLW2t7i5uru0DgUEkJrCw8TFxsfIySchADs="
-                                        alt="." class="noprint" />
-                                </div>
-                            </td>
-                            <td class="bordaInferior">
-                                <div class="box05"><br>
-                                    <table border="0" cellpadding="4" cellspacing="0" width="100%">
-                                        <tbody>
-                                            <tr>
-                                                <td width="42%" class="hh2">
-                                                    Valor dos serviço(s):
-                                                </td>
-                                                <td width="58%" align="right" class="hh2">
-                                                    {VALOR_SERVICOS}
+                                                <td align="right" class="bordaInferior">
+                                                    {TOTAL_RETENCOES_FEDERAIS}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">
-                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
-                                                        class="teste">
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (-) Deduções:
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {DEDUCOES}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (-) Desconto Incondicionado:
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {VALOR_DESCONTO_INCONDICIONADO}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (=) Base de Cálculo:
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {BASE_CALCULO}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="bordaInferior">
-                                                                (x) Alíquota::
-                                                            </td>
-                                                            <td align="right" class="bordaInferior">
-                                                                {ALIQUOTA_SERVICOS}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="valorLiquido">
-                                                                <b>(=) Valor do ISS:</b>
-                                                            </td>
-                                                            <td align="right" class="valorLiquido">
-                                                                <b>{VALOR_ISS}
-                                                                </b>
-                                                            </td>
-                                                        </tr>
+                                                <td class="bordaInferior">
+                                                    (-) ISS Retido na Fonte:
+                                                </td>
+                                                <td align="right" class="bordaInferior">
+                                                    {VALOR_ISS_RETIDO}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="valorLiquido">
+                                                    <b>Valor Líquido:</b>
+                                                </td>
+                                                <td align="right" class="valorLiquido">
+                                                    <b>{VALOR_LIQUIDO}</b>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <img src="data:image/gif;base64,R0lGODlhOgELAMQAAOTz9P7//8/p6v3+/ubz9M3p6s7p6uXz9PP6+sXk5uz397fe4NTr7MDi5MTk5tvu8PD4+Nbs7ff7/PL5+t/x8b7i497w8b/i47Xd3////wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAA6AQsAAAWcYJY1iGieaKqubOu+cCzPdG3feK7vKtKcAgBvSCwaj8ikcukCCE5OpnRKrVqv1uBpcFFgv+CweDxVVAaogwFNbrvf8PfAcFBFGJK4fs/v8yQMESsBDwsWfoiJiokUCw8BLQgJBQcQi5eYmVQQBAUJEzABBAYOGKanqKmqq6ytrq+wsbKztLW2t7i5uru0DgUEkJrCw8TFxsfIySchADs="
+                                 alt="." class="noprint" />
+                        </div>
+                    </td>
+                    <td class="bordaInferior">
+                        <div class="box05"><br>
+                            <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td width="42%" class="hh2">
+                                        Valor dos serviço(s):
+                                    </td>
+                                    <td width="58%" align="right" class="hh2">
+                                        {VALOR_SERVICOS}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                               class="teste">
+                                            <tr>
+                                                <td class="bordaInferior">
+                                                    (-) Deduções:
+                                                </td>
+                                                <td align="right" class="bordaInferior">
+                                                    {DEDUCOES}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bordaInferior">
+                                                    (-) Desconto Incondicionado:
+                                                </td>
+                                                <td align="right" class="bordaInferior">
+                                                    {VALOR_DESCONTO_INCONDICIONADO}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bordaInferior">
+                                                    (=) Base de Cálculo:
+                                                </td>
+                                                <td align="right" class="bordaInferior">
+                                                    {BASE_CALCULO}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bordaInferior">
+                                                    (x) Alíquota::
+                                                </td>
+                                                <td align="right" class="bordaInferior">
+                                                    {ALIQUOTA_SERVICOS}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="valorLiquido">
+                                                    <b>(=) Valor do ISS:</b>
+                                                </td>
+                                                <td align="right" class="valorLiquido">
+                                                    <b>{VALOR_ISS}
+                                                    </b>
+                                                </td>
+                                            </tr>
 
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <img src="data:image/gif;base64,R0lGODlhOgELAMQAAOTz9P7//8/p6v3+/ubz9M3p6s7p6uXz9PP6+sXk5uz397fe4NTr7MDi5MTk5tvu8PD4+Nbs7ff7/PL5+t/x8b7i497w8b/i47Xd3////wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAA6AQsAAAWcYJY1iGieaKqubOu+cCzPdG3feK7vKtKcAgBvSCwaj8ikcukCCE5OpnRKrVqv1uBpcFFgv+CweDxVVAaogwFNbrvf8PfAcFBFGJK4fs/v8yQMESsBDwsWfoiJiokUCw8BLQgJBQcQi5eYmVQQBAUJEzABBAYOGKanqKmqq6ytrq+wsbKztLW2t7i5uru0DgUEkJrCw8TFxsfIySchADs="
-                                        alt="." class="noprint" />
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <span id="form:j_id156">
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <img src="data:image/gif;base64,R0lGODlhOgELAMQAAOTz9P7//8/p6v3+/ubz9M3p6s7p6uXz9PP6+sXk5uz397fe4NTr7MDi5MTk5tvu8PD4+Nbs7ff7/PL5+t/x8b7i497w8b/i47Xd3////wAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAA6AQsAAAWcYJY1iGieaKqubOu+cCzPdG3feK7vKtKcAgBvSCwaj8ikcukCCE5OpnRKrVqv1uBpcFFgv+CweDxVVAaogwFNbrvf8PfAcFBFGJK4fs/v8yQMESsBDwsWfoiJiokUCw8BLQgJBQcQi5eYmVQQBAUJEzABBAYOGKanqKmqq6ytrq+wsbKztLW2t7i5uru0DgUEkJrCw8TFxsfIySchADs="
+                                 alt="." class="noprint" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <span id="form:j_id156">
                 <tr>
                     <td class="bordaInferior">
                         <span style="margin: 0px 5px;" class="subTitulo">Retenções Federais:</span><br />
@@ -705,38 +705,27 @@
                     </td>
                 </tr>
             </span>
-            {OPITANTE_PELO_SIMPLES}
-            <tr>
-                <td>
-                    <table class="tableNoBorder" border="0" cellpadding="4" cellspacing="0" width="100%">
-                        <tbody>
-                            <tr>
-                                <td width="9%">
-                                    <img src="data:image/gif;base64,R0lGODlhJAAvAPcAAP2jo8+Qj/ibm7SzS4V9XV6jJJWLVeh4eQKILf62tv1oZ6elCEcllQGMAsnIOp3MFbSyHOPjxNnZq7y7HOxBAquqG//BwRcAyvdcXPfm7NnW4q3YtsLBHf6Ojtrax+kZGUdHDeQ2Cp6cN8fGlcjHh+SJid3cJ4qIGPn5+/sAAK6sEikpCCueMfTxFP37HKiUjuvr5G5Vg4rJjs7NHqSjFdkzMwUFA+no3DNuOK2sNdFjY+7k5JqZFdrGGxgKt+djZE2pUACVAOrGxzwnqvb29rCuGvn+/ufUGLrfwmmNlOKXlxFIX8YsLOlaW+a1FZybGOXl0fLy5qenSqWjGri0NuTk2mFgELy7ZOz59evd3PX8+/f1HNPSof/w9uHgdespKdTo2P59fcvKdf3M0PtLS8C/ZwGQAaemFrW0E/7+//+FhekcDYmCY92VFnh3E+OsrPb+HdlISEozrtXTNcMSEuXT06ysLPz//6upJby7V/n59VtHwO67vetERCYGtt2oqPh1dZiWCzsdpRoBw+/u6sneGamnG+mpqfz6F+6zuvr5Ff39HMLCZvQ+PgcA0/r6/wGKGhEBxfRvb7u6cvn4HOoLBqObTOM6OqStGQF8M+a+v4O+hsC+HP7/FpORFxibBfT17+vq1fXx8eVwcVY8j+yeoenoHQ8wiu/yHKelIn96Xfv5GwmPCuHgvxIAzC+pC5WUHSwVsvb2+g8Az7e2HGFOvRgAzrOxI/z8///5/97c2t3Av8jGHDudPfv7+oiHEOfw7OLigLq5ERYVoQokqByXHbCuI66uPdHiG9DPHTQetIB2a7KxRNjYs728gZ+eGb++RNLSks7Nqe0gIMnJt4GAF9bVduLs88nGEJmXGud+f9unGeqvstTUYNfHw/esrvSFhviLi/f4+OPZ1PDPzkEdm/F4efnd3Pr9HOa3uOqxsQw9fcbFX9DPX6WkLt1fDvj/F3m7fv//Eaqpafz8/JzMov79/zMPqTYKrq6tCQCQCG9ed21sD+ihogCZAP///yH5BAAAAAAALAAAAAAkAC8AAAj/AP8JHEiwoMGDCBMqXMhwIC4iMFr5ijDJ2TFmzvKE0hMBlLiGBEHd4FJmAB5CrSrQOHNGhbsqHoqUYdQMhh6GMIhwsXMrn4pnN27YUVGkggpmskbQUJHvFrMIUEAhBAUlT7QbqRZMmXBGmoccaLJlQ8MMxrwiEAwtGFCFCokqvgyGymFoAJFJ+SrAquBOxBROIEBMSHUsVQVPRfB4kHCGxpWbBe2RWLBgxAhaJ1Z4evJrCq0VK2jx+AXBzQoVVKgxy2eoFUJCk24FEmHsiQ0rmItMsIL7SbUiIFYYewbrGbQRaRI+kmDnlycIVqol48CLA6frHCZwsuKmdLYrMBqS/wj0bMaMCeg5VTBkqAinCbQ4zeDwxA6UhkTEYOMFIW0FCLRwYB0nEBSFFgTJOBBBQ1FAo8IUFdDCy3lFZOMJYtQlMwEENECARjTJMXQDM8LwMoUbwa1gw4qggcAPDxLKJApIj7ATCAgr5qijjivwQ4MEIBEihgkqeLJSY1OcgQkmZyRJAw1PPIPNHEAyVIUDLlDiwpZbLrJFG04swiWXlLTgBS5WOoDIFmy2CUcPlYSACiVtttlCMGgudOWadVKCyjsppNAGHHWyeWeeCl3pQqFwbFNJoGscQWidLVjzSJp8sonOESEEGug7c7ZZZjsoWDlHJ4qkigg8TlDg6qtHoP+qqiLdlLqQLmywQcCuu6ri66+q8MqrKi/Qw5AGyjgyy7LMNusss47sYcSxQ7hywbXYXjvIINZme20ktcS1kAbVZuuKHwz4UY4fsfjRLbbgiqsQue8O4scgbOwTgyAG+HHBINnGS2295ZBCigNSLGMAA6REEnC4A2trsBSWzGGKKRQPIcg98EI8brnXylFAAYV0sgUlnVCxDBuxdCzvQGkQkpwW/9B7gS22EMOKP68gs+gqJhBwD8A4C/yRKDP+s8sfOwRwDrmz2OLDKQj4408QrxSyyiqoWEIKPsOEDe4/fCgxTgBZCETEJXF8IMA1csxCtdV0B/HJA1uYAA0p60D/EoQ+mSShxQ9fXHLAHQO9EegPRCSxRANBBEG31XY/YEkMBUhOtwwZ9JHCB2kPREQjZGDQhQxmBNGAGalPHoQZOCyhj+tIjIEBGQdMS9AhCgCSCBjFSP466643sPPVZjTQCzClCCCJEAaR04gCP/yzSQN1s9565MOzzgoSGYySQAlJEyTOARhIoo4WQJjhOuuRax+/DP80gUE4QoRYEDmAqDENH1gAAuQmh7ztsSIeRlCCJMLQhB0g5A6HIEMYfqAJLWyiGNirm+aUtwF7aGMaagAHORQiDm18IwFN6Mc/wCADFqSOew0AQj2AgYISNEEBjVDhQnYwig4AgG0H4MM4gMCAhA1sAAkeqAM3flCDaXQgDNogQkOyoAQypEASY5DEKLRRCm58gxtKMEcH1PCoL6RDd/g5AB10YIFvqCEMHQhHOAAAgDF0QAF0YMIhEAcSgWhhFy/4gwAwAAgAnFAA4dBiAF7gwD4WBBf0IEId3qCEEpTgDZrYgRH46MhONiQgADs="
-                                        alt="Bras&atilde;o Prefeitura" />
-                                </td>
-                                <td width="82%">
-                                    <span class="subTitulo">Prefeitura de Belo Horizonte - Secretaria Municipal de
-                                        Finan&ccedil;as</span>
-                                    <p class="teste">
-                                        Rua Esp&iacute;rito Santo, 605 - 2&ordm; andar - Centro - CEP: 30160-919 - Belo
-                                        Horizonte MG.
-                                        <br />
-                                        Tel.: 156 / e-mail: atendimentofinancas@pbh.gov.br
-                                        <br />
-                                    </p>
-                                </td>
-                                <td width="9%">
-                                    <img src="data:image/gif;base64,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"
-                                        alt="Bras&atilde;o Prefeitura" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    {OPITANTE_PELO_SIMPLES}
+    <tr>
+        <td>
+            <table class="tableNoBorder" border="0" cellpadding="4" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td width="9%">
+                        <img src="data:image/png;base64,{PREFEITURA_LOGO_BASE_64}"
+                             alt="Bras&atilde;o Prefeitura" />
+                    </td>
+                    <td width="82%">
+                        {TEXT_PREFEITURA}
+                    </td>
+                    {LOGO_NOTA_10}
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
 </body>
 
 </html>

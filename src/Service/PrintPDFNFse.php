@@ -12,16 +12,22 @@ class PrintPDFNFse
     private $html;
     private $nfse;
     private $logo64;
+    private $logoPrefeitura;
+    private $textPrefeitura;
+    private $logoNota10;
 
     /**
-     *recebe o objeto da nota fiscal para impressão.
+     * recebe o objeto da nota fiscal para impressão.
      *
      * @param NFse\Models\NFse;
      */
-    public function __construct(NFse $nfse, string $logo64)
+    public function __construct(NFse $nfse, string $logo64, string $logoPrefeitura, $textPrefeitura, $logoNota10)
     {
         $this->nfse = $nfse;
         $this->logo64 = $logo64;
+        $this->logoPrefeitura = $logoPrefeitura;
+        $this->textPrefeitura = $textPrefeitura;
+        $this->logoNota10 = $logoNota10;
     }
 
     //gera e retorna o pdf da nota
@@ -363,6 +369,9 @@ class PrintPDFNFse
                 '{VALOR_INSS}',
                 //footer
                 '{OPITANTE_PELO_SIMPLES}',
+                '{PREFEITURA_LOGO_BASE_64}',
+                '{TEXT_PREFEITURA}',
+                '{LOGO_NOTA_10}',
             ],
             [
                 //css
@@ -438,6 +447,9 @@ class PrintPDFNFse
                 Utils::formatRealMoney($this->nfse->service->valueCSLL ?? 0),
                 Utils::formatRealMoney($this->nfse->service->valueINSS ?? 0),
                 $optanteSimplesNacional,
+                $this->logoPrefeitura,
+                $this->textPrefeitura,
+                $this->logoNota10,
             ],
             $this->html
         );
